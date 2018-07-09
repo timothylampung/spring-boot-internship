@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta charset="utf-8">
+
+    <title th:text="${title}"></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css"
+          th:href="@{webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <!--<link type="text/css" rel="stylesheet" th:href="@{/css/main.css}"/>-->
+    <link type="text/css" rel="stylesheet" th:href="@{/css/jumbotron.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/form-validation.css}"/>
+
+
+</head>
+<body>
+
+<div th:replace="nav-header.html :: header"></div>
+
+
+<main role="main">
+
+ <div class="container">
+
+
+     <div class="py-5 text-center">
+
+     </div>
+     <div class="row">
+
+        <div class="col-md-8 order-md-1 center-div">
+            <div class="row"><h4 class="mb-3">My Progress</h4>
+            </div>
+            <form>
+
+                <div class="mb-3">
+                    <label for="username">Date</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Date</span>
+                        </div>
+                        <input th:value="${username}" type="date" class="form-control" id="username"
+                               placeholder="12/12/2018" required>
+
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Entry <span class="text-muted"></span></label>
+                    <textarea th:value="${email}" type="email" class="form-control" id="email"
+                              placeholder="What have you learned..." required></textarea>
+                </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">ADD PROGRESS</button>
+            </form>
+        </div>
+    </div></div>
+
+</main>
+
+<div th:replace="footer.html :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

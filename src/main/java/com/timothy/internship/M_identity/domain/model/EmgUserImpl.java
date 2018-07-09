@@ -31,6 +31,19 @@ public class EmgUserImpl implements EmgUser, Serializable {
     @JoinTable(name = "dt_user_role", joinColumns = @JoinColumn(name = "dt_user_id"), inverseJoinColumns = @JoinColumn(name = "dt_accesslevel_id"))
     private Set<EmgRoleImpl> roles;
 
+
+//    @OneToOne(mappedBy = "actor", cascade = CascadeType.ALL,
+//            fetch = FetchType.LAZY, optional = false)
+//    private EmgIdentityStudentImpl student;
+//
+//
+//    @OneToOne(mappedBy = "actor", cascade = CascadeType.ALL,
+//            fetch = FetchType.LAZY, optional = false)
+//    private EmgIdentityLecturerImpl lecturer;
+
+
+
+
     public EmgUserImpl() {
     }
 
@@ -124,5 +137,9 @@ public class EmgUserImpl implements EmgUser, Serializable {
     public void setRoles(Set<EmgRoleImpl> roles) {
         this.roles = roles;
     }
+//
+//    public EmgIdentityStudentImpl getstudent() { return student; }
+//
+//    public void setstudent(EmgIdentityStudentImpl student) { this.student = student; }
 
 }

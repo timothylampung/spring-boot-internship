@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface EmgUserRepository extends JpaRepository<EmgUserImpl,Integer> {
-    Optional<EmgUserImpl> findByUsername(String username);
+    Optional<EmgUserImpl> findByUserName(String userName);
  }

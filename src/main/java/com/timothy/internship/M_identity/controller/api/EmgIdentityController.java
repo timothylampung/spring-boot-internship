@@ -15,7 +15,7 @@ public class EmgIdentityController {
 
 
     @GetMapping(path = "/body")
-    public String body(@RequestBody EmgUserVo userVo){
+    public String body(){
 
         return "HELLO";
     }

@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
-@Entity
+@Entity(name = "security_user")
 @Table(name = "dt_user")
 public class EmgUserImpl implements EmgUser, Serializable {
 

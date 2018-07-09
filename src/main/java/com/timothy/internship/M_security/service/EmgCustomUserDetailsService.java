@@ -25,7 +25,7 @@ public class EmgCustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<EmgUserImpl> optionalUser = emgUserRepository.findByUsername(username);
+        Optional<EmgUserImpl> optionalUser = emgUserRepository.findByUserName(username);
 
         optionalUser.orElseThrow(()-> new UsernameNotFoundException("Username Not Found"));
 
